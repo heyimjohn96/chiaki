@@ -66,7 +66,7 @@ print()
 print(LOGIN_URL)
 print()
 print("➡️  After logging in, when the page shows \"redirect\", copy the URL from the address bar and paste it here:")
-code_url_s = input("> ")
+code_url_s = input(">https://auth.api.sonyentertainmentnetwork.com/2.0/oauth/authorize?ui=pr&state=78f035caa8bf9eaa5864321ba3fbe898&client_id=ce381e15-9cdd-4cf9-8384-0cf63db17f6a&no_captcha=true&redirect_uri=https%3A%2F%2Fid.sonyentertainmentnetwork.com%2Fid%2Fmanagement%2F%23%2Fp%3Fpr_referer%3Dcam%26entry%3D%252Fp&response_type=token&scope=openid%3Auser_id openid%3Aonline_id openid%3Actry_code openid%3Alang user%3Aaccount.communication.get kamaji%3Aget_account_hash oauth%3Amanage_user_auth_sessions openid%3Aacct_uuid user%3Aaccount.authentication.mode.get user%3Aaccount.phone.masked.get user%3Aaccount.notification.create openid%3Acontent_ctrl user%3Aaccount.subaccounts.get openid%3Aage user%3Aaccount.graduate can%3Acontext.user.get can%3Acontext.user.set user%3AverifiedAccount.get kamaji%3Aaccount_link_user_link_account kamaji%3Aget_internal_entitlements ias%3Aaccount.onlineIdChange.get user%3Aaccount.onlineId.get user%3AonlineIdSuggestion.get kamaji%3Aactivity_feed_set_feed_privacy user%3Aaccount.identityMapper user%3Aaccount.email.create user%3Aaccount.emailVerification.get user%3Aaccount.personal.get user%3Aaccount.tosua.update device%3Aget device%3Aupdate device%3Aactivate openid%3Aacct_id_str deviceManagement%3Adevices.deactivateAll digitalRightsManagement%3ApremiumServices.update ")
 code_url = urlparse(code_url_s)
 query = parse_qs(code_url.query)
 if "code" not in query or len(query["code"]) == 0 or len(query["code"][0]) == 0:
